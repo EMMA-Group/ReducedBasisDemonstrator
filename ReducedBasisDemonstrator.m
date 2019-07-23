@@ -31,9 +31,9 @@
 %          Special Issue "Machine Learning, Low-Rank Approximations and Reduced Order Modeling in Computational Mechanics"
 % Year:    2019
 % Volume:  24
-% Number:  1
-% DOI   ...
-% URL   dx.doi.org/...
+% Number:  2
+% DOI   :  10.3390/mca24020056
+% URL   :  https://dx.doi.org/10.3390/mca24020056
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% erase workspace and set global variables
@@ -41,7 +41,7 @@ clear all
 global N B w N_qp xi W P C F                                               % for better readability, most quantities are global
 %% read Reduced Basis matrix and the weight vector
 N = 10;                                                                    % number of basis elements
-B = [dlmread('data/example_Bmatrix_material1.txt'); dlmread('data/example_Bmatrix_material2.txt')]; % read the RB from files, one for each material
+B = [dlmread('data/example_Bmatrix_material1.txt');dlmread('data/example_Bmatrix_material2.txt')]; % read the RB from files, one for each material
 B = B(:,1:N);                                                              % adjust the size of the RB. now size(B) = [9*N_qp, N]
 w =  dlmread('data/example_weights_material1.txt');                        % read the quadrature weights for the first material
 N_qp_phase1 = length(w);                                                   % store the number of quadrature points of this material

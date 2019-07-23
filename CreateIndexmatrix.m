@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COPYRIGHT NOTES
 %
-% CreateIndexmatrix.m
+% CreateIndexMatrix.m
 % Copyright (C) 2019 by Oliver Kunc
 %
 % This program is free software: you can redistribute it and/or modify
@@ -31,9 +31,9 @@
 %          Special Issue "Machine Learning, Low-Rank Approximations and Reduced Order Modeling in Computational Mechanics"
 % Year:    2019
 % Volume:  24
-% Number:  1
-% DOI   ...
-% URL   dx.doi.org/...
+% Number:  2
+% DOI   :  10.3390/mca24020056
+% URL   :  https://dx.doi.org/10.3390/mca24020056
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -1,0 +1,85 @@
+------------------------------
+Content of this file 
+------------------------------
+1) What's this
+2) How to use
+3) Bug reporting
+4) License information
+------------------------------
+
+1)     WHAT'S THIS
+==============================
+This Reduced Basis (RB) tool is an efficient solution to the problem of
+hyperelastic homogenization under finite strains. It takes the macroscopic
+stretch tensor "Ubar" as input and outputs the corresponding homogenized first
+Piola-Kirchhoff stress "Pbar". It does so by means of a linear combination of
+pre-computed F-fluctuations such that the overall hyperelastic energy is
+minimized. When the coefficients are found, Pbar is computed as the volume
+average of the microscopic stress field P.
+The RB matrix B contains the RB elements as columns. All matrices are stored in
+row-major format (in contrast to Matlab/Octave default, hence some
+transpositions near the reshape commands). The columns of the RB matrix B
+contain deformation gradient fluctuations (9 components) at each quadrature
+point (N_qp points) for each basis element (N elements), thus
+                       size(B) = [ 9*N_qp , N ].
+The example data contains multiple sets of approximately uniformly distributed
+directions in 5 dimensions, the RB of an example micro-structure, and the
+quadrature weights. The microstructure is the unit cube with an off-center
+cubical inclusion. Due to the nature of the method, no mesh and not even point
+coordinates are necessary. For the sake of brevity, such information is not
+contained in this repository.
+Since the original mesh is very simple, all quadrature weights are equal
+in this example. The code, however, is general and does not exploit this.
+
+This software package is related to the open access research article
+Authors: Oliver Kunc and Felix Fritzen
+Title  : Finite strain homogenization using a reduced basis and efficient
+         sampling
+Journal: Mathematical and Computational Applications
+         Special Issue "Machine Learning, Low-Rank Approximations and Reduced
+         Order Modeling in Computational Mechanics"
+Year   : 2019
+Volume : 24
+Number : 2
+DOI    : 10.3390/mca24020056
+URL    : https://dx.doi.org/10.3390/mca24020056
+
+2)     HOW TO USE
+==============================
+2.1)   REQUIREMENTS
+==============================
+This program was tested with Matlab R2018a. As only basic functions are 
+utilized, it is expected to be compatible with most earlier and later releases.
+
+2.2)   DOCUMENTATION
+==============================
+As the main code consists of 50 lines of code, only inline comments are provided
+for documentation purposes. All main steps contain references to the
+corresponding formulas in the open access paper.
+
+2.3)   EXECUTION
+==============================
+Start the program by running ReducedBasisDemonstrator.m
+You can vary the loading direction (e.g. by picking another row of the matrix
+"directions"), the deviatoric amplitude "t", and the dilatational amplitude "J".
+See the paper for more information or contact the authors.
+
+You may create your own set of equidistributed directions by using the program
+provided in the repository https://github.com/EMMA-Group/MinimumEnergyPoints
+
+2.4)   HOW TO CITE
+==============================
+When referring to this software, please cite the article mentioned above in
+Section 1) "WHAT'S THIS".
+
+3) BUG REPORTING
+==============================
+Please report bugs and suggestions to the administrators of the corresponding
+github repository:
+        https://github.com/EMMA-Group/ReducedBasisDemonstrator
+or directly e-mail
+        kunc@mechbau.uni-stuttgart.de
+
+4) LICENSE INFORMATION
+==============================
+See file LICENSE
